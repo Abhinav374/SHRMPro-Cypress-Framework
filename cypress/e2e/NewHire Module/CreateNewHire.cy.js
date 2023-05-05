@@ -1,0 +1,37 @@
+describe('NewHire list',()=>{
+
+    it('Create record',()=>{
+        cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+        
+        cy.loginapp('administrator','Admin@1234')
+        
+        cy.get('.icon-dashboard').trigger('mouseover').click()
+        cy.get('#li81').click()
+        cy.get('#li1560').click()
+        cy.get('#li1567').click()
+        cy.get('.add-emp-plus > .fa').click()
+        cy.get('#FirstName').type('David')
+        cy.get('#MiddleName').type('P')
+        cy.get('#LastName').type('Ray')
+         cy.get('#ddlClient').select('SWL Noida')
+         cy.get('#BranchName').select('Noida sector 16')
+        // cy.get('#ddlLocation').select('Noida')
+        cy.get('#DeptName').select('Tester')
+        // cy.get('#JobTitle').select('Software Test engineer')
+        cy.get('#PersonalEmail').type('david.a@gmail.com')
+        cy.get('#ContactNumber').type('7247338433')
+        // cy.get('#HiredOn').type('04-20-2023',{force:true})
+        // cy.get('#ExpectedDateOfJoining').type('')
+        // cy.iframe('.ui-datepicker-calendar>.04-26-2023')
+        // cy.frameLoaded('#ui-datepicker-div')
+        // cy.iframe().find('. ui-datepicker-current-day').type('04-26-2023')
+        cy.get('#ExpectedDateOfJoining').type('05-02-2023',{force:true})
+        // cy.get('#OfferedCTC').type('60,0000')
+        // cy.get('#OnBoardingCompletedOn').type('04-25-2023',{force:true})
+        // cy.get('#attachmentfile1').attachFile('Security.pdf')
+    // cy.get('#IsSendToDocuSign').click()
+    // cy.get('#AllDocumentDetailsLst_3__IsSelected').click()
+     cy.get('#btnsave').click()
+    })
+
+})
