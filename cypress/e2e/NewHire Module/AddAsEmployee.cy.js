@@ -15,7 +15,7 @@ describe('NewHire list',()=>{
         cy.get(':nth-child(1) > :nth-child(1) > .dropdown > .fa').click()
         cy.get('#btnADDemp').click()  
         cy.get('#txtDOB').type('01-31-1990') 
-        cy.get('#ddlgender').select('Female') 
+        cy.get('#ddlgender').select('Male') 
         cy.get('#ddlRoleName').select('Software Tester')
         cy.get('#ddlUniqueDocumentType').select('Unique Identification Authority of India(UIDAI)')
         cy.get('#txtAdharNo').type('958423078914')
