@@ -1,0 +1,23 @@
+
+[
+{
+    "username":"administrator",
+    "password":"Admin@1234",
+    "expected":"shrms-pro-logo"
+    
+},
+
+{
+    "username":"administr",
+    "password":"Admin@1234",
+    "expected":"Invalid User Name or Password!"
+    
+
+}
+
+
+
+    
+
+
+]
