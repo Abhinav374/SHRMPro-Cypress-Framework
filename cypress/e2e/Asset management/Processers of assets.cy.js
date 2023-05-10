@@ -29,7 +29,7 @@ describe(' Asset Processers',()=>
     
         
     })
-    it.only('asset allocation ',()=>
+    it('asset allocation ',()=>
     {
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx')
 
@@ -44,8 +44,8 @@ describe(' Asset Processers',()=>
         cy.get('.add-emp-plus').click()
         cy.get('#ddlCompany').select('1')
         cy.get('#ddlBranch').select('4')
-        cy.get('#ddl_AssetType').select('max')
-        cy.get('#ddl_Manufacturer').select('maxmiunm')
+        cy.get('#ddl_AssetType').select('earpods')
+        cy.get('#ddl_Manufacturer').select('bolt')
         //cy.wait(4000)
         //cy.xpath('(//select[@id="ddl_SerialNumber"])[1]').click().trigger('mouseover')
         cy.get('#ddl_SerialNumber_chosen').click() 
@@ -55,5 +55,38 @@ describe(' Asset Processers',()=>
         cy.get('.add-body-buttons > #btn_Save').click()
         
     })
+    it.only('asset allocation to empolyee ',()=>
+    {
+        cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx')
+
+        cy.get('#txtUsername').type('administrator')
+        cy.get('#txtPassword').type('Admin@1234')
+        cy.get('#btnSubmit').click()
+        cy.get('.gallaryIcon').scrollIntoView({duration:2000})
+        cy.get('.icon-dashboard').trigger('mouseover')
+        cy.get('#li81').click()
+        cy.get('#li76').click()
+        cy.get('#li75').click()
+        cy.get('#MenuContainer > ul > :nth-child(2) > a').click()
+        cy.get('.add-emp-plus').click()
+        cy.get('#ddlCompany').select('1')
+        cy.get('#ddlBranch').select('4')
+        cy.get('#ddlAllocateto').select('2')
+        cy.get('#ddl_Employee').select('Reshma  (Sphi/0045)')
+        cy.get('#ddl_AssetType_chosen > .chosen-single > span').click()
+        cy.get('div[id="ddl_AssetType_chosen"] input[type="text"]').type('earpods').type('{enter}')
+
+        
+        cy.get('#ddl_Manufacturer_chosen > .chosen-single > span').click()
+        cy.get('div[id="ddl_Manufacturer_chosen"] input[type="text"]').type('bolt').type('{enter}')
+
+        //cy.get('#ddl_SerialNumber')
+        //cy.get('.active-result').click({multiple: true },{force: true}  )
+        cy.get('.add-body-buttons > #btn_Save').click()
+        
+
+    })
+
+
 
 })
