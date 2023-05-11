@@ -15,7 +15,7 @@ describe('accepting the asset',()=>
         cy.get(':nth-child(8) > #btnApprove > .fa').click()
         cy.get('.comfirmation-alert-box > .confirm-button > .btn-danger')
     })
-        it.only('login with asset allocated empolyee',()=>
+        it('login with asset allocated empolyee',()=>
         {
             cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx')
     

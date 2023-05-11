@@ -1,0 +1,13 @@
+// import "../e2e/Asset management/Accepting the asset.cy"
+// import "../e2e/Asset management/Assets type.manfactures .cy"
+// import "../e2e/Asset management/Processers of assets.cy"
+// import "../e2e/Employee Module/CreateTypesOfEmployment-Setting.cy"
+
+import "../e2e/NewHire Module/AddAsEmployee.cy"
+import "../e2e/NewHire Module/CompletedOnboarding.cy"
+import "../e2e/NewHire Module/CreateClientfromAddNewHirePage.cy"
+import "../e2e/NewHire Module/CreateNewHire.cy"
+import "../e2e/NewHire Module/CreatePreOnboardingDocs.cy"
+import "../e2e/NewHire Module/CreatedRecordShownOnGrid.cy"
+import "../e2e/NewHire Module/Delete&InactivePreOnboardingRecords.cy"
+import "../e2e/NewHire Module/EditNewHire.cy"
