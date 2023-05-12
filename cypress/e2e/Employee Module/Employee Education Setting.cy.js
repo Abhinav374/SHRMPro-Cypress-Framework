@@ -7,10 +7,8 @@ describe('NewHire list',()=>{
         cy.get('.icon-dashboard').trigger('mouseover').click()
         cy.get('#li82').click()
         cy.get('#li137').click()
-        cy.get('#li414').click()
-        cy.get('#add-emp-plus').click()
-        cy.get('#txtStatusName').type('Adhoc')
-        cy.get('.add-body-buttons > #btn_Save').click()
+        cy.get('#li138').click()
+        
 
 
 

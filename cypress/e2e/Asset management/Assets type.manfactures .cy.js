@@ -36,7 +36,7 @@ describe(' Asset mangamment',()=>
     
         
     })
-    it.only('asset vendor ',()=>
+    it('asset vendor ',()=>
     {
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx')
 
@@ -47,14 +47,15 @@ describe(' Asset mangamment',()=>
         cy.get('.icon-dashboard').trigger('mouseover')
         cy.get ('#li82').click()
         cy.get('#li1569').click()
-cy.get('#li1580').click()
-cy.get('.add-emp-plus').click()
-cy.get('#txt_name').type('cvmm')
-cy.get('#txt_contactno').type('9786867676')
-cy.get('#txt_contactperson').type('ms')
-cy.get('#txtAddress').type('76/105/6a6')
-cy.get('#btn_Save_New').click()
+        cy.get('#li1580').click()
+        cy.get('.add-emp-plus').click()
+        cy.get('#txt_name').type('cvmm')
+        cy.get('#txt_contactno').type('9786867676')
+        cy.get('#txt_contactperson').type('ms')
+        cy.get('#txtAddress').type('76/105/6a6')
+        cy.get('#btn_Save_New').click()
     
+
         
     })
 

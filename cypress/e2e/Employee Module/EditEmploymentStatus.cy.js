@@ -8,9 +8,10 @@ describe('NewHire list',()=>{
         cy.get('#li82').click()
         cy.get('#li137').click()
         cy.get('#li414').click()
-        cy.get('#add-emp-plus').click()
-        cy.get('#txtStatusName').type('Adhoc')
-        cy.get('.add-body-buttons > #btn_Save').click()
+        cy.get(':nth-child(1) > :nth-child(1) > .dropdown > .fa').click()
+        cy.xpath("//div[@class='dropdown table-more-drop open']//a[@id='btnEdit']").click()
+        cy.get('#ddlStatus').select('In-Active')
+        cy.xpath("//div[@class='add-body-buttons']//input[@id='btn_Save']").click()
 
 
 
