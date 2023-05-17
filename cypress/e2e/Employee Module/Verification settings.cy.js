@@ -1,6 +1,6 @@
-describe('Employee Education',()=>{
+describe('Employee verification settings',()=>{
 
-    it('Employee Education criteria',()=>{
+    it('Verification settings',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')
@@ -8,15 +8,14 @@ describe('Employee Education',()=>{
         cy.get('.icon-dashboard').trigger('mouseover').click()
         cy.get('#li82').click()
         cy.get('#li137').click()
-        cy.get('#li138').click()
+        cy.get('#li136').click()
         cy.get('#add-emp-plus').click()
-        cy.get('#ddlstd1').select("Bachelor's")
-        cy.get('#ddlcourse').type('B.tech')
+        cy.get('#ddlCompany').select('Sphinx World Biz Ltd')
+        cy.get('#ddlBranch').select('123-Noida sector 16')
+        cy.get('#ddlVerificationtype').select('Post')
+        cy.get('#ddlVerificationCategory').select('Category 1')
+        cy.get('#txtdescrip').type('Documents verification')
         cy.get('#btnsave').click()
-        
-        
-
-
 
     })
 

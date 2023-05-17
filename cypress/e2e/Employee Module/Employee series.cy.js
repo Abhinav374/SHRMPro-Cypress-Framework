@@ -1,6 +1,6 @@
-describe('Employee Education',()=>{
+describe('Employee request',()=>{
 
-    it('Employee Education criteria',()=>{
+    it('Request Reason',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')
@@ -8,12 +8,11 @@ describe('Employee Education',()=>{
         cy.get('.icon-dashboard').trigger('mouseover').click()
         cy.get('#li82').click()
         cy.get('#li137').click()
-        cy.get('#li138').click()
-        cy.get('#add-emp-plus').click()
-        cy.get('#ddlstd1').select("Bachelor's")
-        cy.get('#ddlcourse').type('B.tech')
-        cy.get('#btnsave').click()
-        
+        cy.get('#li143').click()
+        cy.xpath("//li[@id='div_edit']//i[@class='fa fa-pencil']").click()
+        cy.get('#ddlLeadItem_').select('Company Name')
+        cy.get('#ddlLeadSeparatedBy_').select('/')
+
         
 
 
