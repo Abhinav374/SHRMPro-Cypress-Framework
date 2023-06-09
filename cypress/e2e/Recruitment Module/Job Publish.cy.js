@@ -1,0 +1,83 @@
+describe('Job Publish',()=>{
+
+    it('Job Publish to employee',()=>{
+        cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+        
+        cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+        // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+        cy.get('.icon-dashboard').trigger('mouseover').click()
+        cy.get('#li478').click()
+        cy.get('#li1637').click()
+        cy.get('#li1662').click()
+        cy.get(':nth-child(1) > :nth-child(4) > .btn-wrapper > .blue').click()
+        cy.get('#ddlEmpLocation').select('123-Noida sector 16')
+        cy.get('#ddlEmploymentLevel').select('Associate')
+        cy.get('#ddlTeamMember').select('praveen kumar')
+        cy.get('#txtPublishEndDate').type('21/06/2023',{force: true})
+        cy.get('#dvPublishedJob > :nth-child(3) > .col-md-12 > .jqte > .jqte_editor').type('New Job opportunity')
+        cy.get('#btn_InternalSave').click()
+
+
+    })
+    it('Job Publish to career site',()=>{
+        cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+        
+        cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+        // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+        cy.get('.icon-dashboard').trigger('mouseover').click()
+        cy.get('#li478').click()
+        cy.get('#li1637').click()
+        cy.get('#li1662').click()
+        cy.get(':nth-child(1) > :nth-child(4) > .btn-wrapper > .publish-btn > .fa').click()
+        cy.get('#lnkbtncareersite').click()
+        cy.get('#ddlCTeamMember').select('Ramesh kumar')
+      cy.get('#txtCPublishEndDate').type('21/06/2023',{force: true})
+      cy.get('#dvCareerPublishedJob > :nth-child(4) > .col-md-12 > .jqte > .jqte_editor').type('New Job opportunity')
+      cy.get('#btn_CareerSave').click()
+
+})
+it('Job Publish to consultant',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+    // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+    cy.get('.icon-dashboard').trigger('mouseover').click()
+    cy.get('#li478').click()
+    cy.get('#li1637').click()
+    cy.get('#li1662').click()
+    cy.get(':nth-child(1) > :nth-child(4) > .btn-wrapper > .publish-btn > .fa').click()
+    cy.get('#lnkbtnConsultant').click()
+    cy.get('#ddlConsultant_chosen > .chosen-choices > .search-field > .default').type('Gaurav').type('{enter}')
+    cy.get('#ddlConsultantTeamMember').select('Ramesh kumar')
+    cy.get('#NtxtConsultantEndDate').type('21/06/2023',{force: true})
+    cy.get('#dvConsultants > :nth-child(3) > .col-md-12 > .jqte > .jqte_editor').type(' for the position of security analyst')
+    cy.get('#btn_ConsultantPreview').click()
+    cy.get('#btn_ConsultantSave').click()
+})
+it.only('Job Publish to consultant',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+    // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+    cy.get('.icon-dashboard').trigger('mouseover').click()
+    cy.get('#li478').click()
+    cy.get('#li1637').click()
+    cy.get('#li1662').click()
+    cy.get(':nth-child(1) > :nth-child(4) > .btn-wrapper > .publish-btn > .fa').click()
+    cy.get('#liJobPortal > a').click()
+    cy.get('#companyEmailAddress').type('hr@sphinxworldbiz.com')
+    cy.get('#streetAddress').type('Noida sector-16, A-27')
+    cy.get('#city').select('Noida')
+    cy.get('#state').select('Uttar Pradesh')
+    cy.get('#countryCode').type('+91')
+    cy.get('#postalCode').type('201301')
+    cy.get(':nth-child(6) > .col-md-12 > .jqte > .jqte_editor').type('As a penetration tester, you’ll understand complex computer systems and technical cyber security terms. You’ll need to do')
+    cy.get('#jobLocationCity').select('Noida')
+    cy.get('#jobLocationState').select('Uttar Pradesh')
+    cy.get('#jobLocationCountryCode').type('91')
+    cy.get('#NtxtJobPortalEndDate').type('21/06/2023',{force: true})
+    cy.get('#btn_JobPortalSave').click()
+
+
+})
+})
