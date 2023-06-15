@@ -1,0 +1,103 @@
+describe('Add Candidate',()=>{
+
+    it('Add candidate from ESS My Job',()=>{
+        cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+        
+        cy.loginapp('democlient786@gmail.com','Admin@1234')
+        // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+        cy.get('.icon-dashboard').trigger('mouseover').click()
+        cy.get('#li223').click()
+        cy.get('#li522').click()
+        cy.get('#MenuContainer > ul > :nth-child(1) > a').click()
+        cy.get('.dropdown > .fa').click()
+        cy.get('#ulList > li > a').click()
+        cy.get('#MRP_txtFNameMultiple').type('Rashid')
+        cy.get('#MRP_txtLNameMultiple').type('Khan')
+        cy.get('#MRP_txtEamilidMultiple').type('rashid.k@yopmail.com')
+        cy.get('#MRP_txtmobileMultiple').type('9898756464')
+        cy.get('#MRP_ddlgenderresumeMultiple').select('Male')
+        cy.get('#MRP_txtCurrentCTC2Multiple').type('500000')
+        cy.get('#MRP_txtExpectedCTC2Multiple').type('700000')
+        cy.get('#MRP_divMultipleResumeParsing > .slide-popup-inner > .requisition-body > :nth-child(1) > .rform > .rform-buttons > .pull-right > .btn-success').click()
+
+    })
+                it('Add candidate from MSS',()=>{
+                    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+                    
+                    cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+                    // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+                    cy.get('.icon-dashboard').trigger('mouseover').click()
+                    cy.get('#li478').click()
+                    cy.get('#li1637').click()
+                    cy.get('#li1662').click()
+                    cy.get(':nth-child(2) > :nth-child(6) > .eclipse-box').invoke('removeAttr','').click()
+
+
+})
+it('Add candidate from Process',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+    // cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+    cy.get('.icon-dashboard').trigger('mouseover').click()
+    cy.get('#li81').click()
+    cy.get('#li197').click()
+    cy.get('#li197').click()
+    cy.get('#li201').click({force: true})
+    cy.get(':nth-child(2) > :nth-child(6) > .eclipse-box').click()
+})
+it('Add candidate from Dashboard',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('rajatpython94@gmail.com','Admin@1234')
+    cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
+    cy.get('.owl-item.active > .item > .award-img-text > :nth-child(4) > .btn').click()
+    cy.get('#txtnameOpen').type('Saurabh')
+    cy.get('#txtphone').type('8910103345')
+    cy.get('#txtemail').type('sau.rabh@gmail.com')
+    cy.get('#txtCandidateRemarks').type('Looking for new job opportunity')
+    cy.get('#Addvacancy > .slide-popup-inner > .add-body-buttons > #btnSave').click()
+})
+it('Add candidate from consultant',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('Gauravs','Admin@1234')
+    cy.get('.right-dropdown > .dropdown > .dropdown-toggle').click()
+    cy.get('.right-dropdown > .dropdown > .dropdown-menu > li > a').click()
+    cy.get('#txtFNameMultiple').type('Suresh')
+    cy.get('#txtLNameMultiple').type('Kumar')
+    cy.get('#txtEamilidMultiple').type('suresh.k@yahoo.com')
+    cy.get('#txtmobileMultiple').type('9807680983')
+    cy.get('#ddlgenderresumeMultiple').select('Male')
+    cy.get('#txtExperienceInYearMultiple').type('5')
+    cy.get('#txtExpectedCTC2Multiple').type('1000000')
+    cy.get('#txtstandard0').type('Bachelors')
+    cy.get('#ddlyear0').select('2015')
+    cy.get('.rform-buttons > .pull-right > .btn-success').click()
+})
+it('Add candidate from candidate bank',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
+    
+    cy.loginapp('praveen@yopmail.com','Admin@1234')
+    cy.get('.icon-dashboard').trigger('mouseover').click()
+    cy.get('#li81').click()
+    cy.get('#li197').click()
+    cy.get('#li206').click()
+   
+    cy.get('#MenuContainer > ul > :nth-child(2) > a').click()
+    cy.get(':nth-child(10) > :nth-child(2) > .icon-btn').click()
+    cy.get('#txtjobid').type('012022-00028').type('{enter}')
+    cy.get('#ui-id-2').click({force:true})
+    // cy.get("input[onclick='SaveAssignedJob()']").click()
+})
+it.only('Add candidate from carrier site',()=>{
+    cy.visit('http://hrms219.sphinxworldbiz.com:8089/career.html#collapse1405')
+    cy.get('#btnApply_1').click()
+    cy.get('#txtCandidateName_1').type('Sam')
+    cy.get('#txtCandidateEmail_1').type('sam.b@spl.com')
+    cy.get('#txtReferBy_1').type('Alok')
+    cy.get('#txtCandidateContact_1').type('9898776767')
+    cy.get('#fl_CandidateResume_1').attachFile('Bhupesh.docx')
+    cy.get('#externalJobApply_1').click()
+})
+})

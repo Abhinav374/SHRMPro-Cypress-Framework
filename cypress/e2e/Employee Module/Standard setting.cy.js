@@ -1,6 +1,6 @@
-describe('NewHire list',()=>{
+describe('Employee standard settings',()=>{
 
-    it('Complete onboarding',()=>{
+    it('Standard setting',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')

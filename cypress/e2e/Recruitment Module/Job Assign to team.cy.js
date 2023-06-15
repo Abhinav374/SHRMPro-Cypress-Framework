@@ -1,6 +1,6 @@
-describe('Offer Letter Template',()=>{
+describe('Job assign',()=>{
 
-    it('Create Offer Letter Template',()=>{
+    it('Job assign to team',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('rajatpython94@gmail.com','Admin@1234')
@@ -11,7 +11,11 @@ describe('Offer Letter Template',()=>{
         cy.get('#li1662').click()
         cy.get('#MenuContainer > ul > :nth-child(1) > a').click()
         cy.get(':nth-child(1) > :nth-child(4) > .btn-wrapper > .green > .fa').click()
-        cy.get('#txtEmployeeName_1').type('Ramesh Kumar').type('{enter}')
+        cy.get('#txtEmployeeName_1').type('khushboo Kumar').type('{enter}')
+       
+        cy.get('#ui-id-15').click()
+        cy.get('.modal-header > .slide-popup-right > .closes > .fa').click()
+        cy.get('#btnSave').click()
 
 
     })

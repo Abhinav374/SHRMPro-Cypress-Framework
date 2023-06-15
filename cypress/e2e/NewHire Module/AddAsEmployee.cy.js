@@ -26,3 +26,5 @@ describe('NewHire list',()=>{
 
 })
 //div[class='dropdown table-more-drop open']//a[id='btnADDemp']
+
+

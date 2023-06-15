@@ -18,7 +18,7 @@ describe('Recruitment setting',()=>{
         cy.get('#btnSave').click()
 
     })
-    it.only('Edit PayGrade',()=>{
+    it('Edit PayGrade',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')

@@ -1,6 +1,6 @@
-describe('Resume Template',()=>{
+describe('Recruiters Activity',()=>{
 
-    it('Create Resume Template',()=>{
+    it('Create Recruiters Activity',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')
@@ -14,7 +14,7 @@ describe('Resume Template',()=>{
         cy.get('.add-body-buttons > #btn_Save').click()
         
     })
-    it('Edit Resume Template',()=>{
+    it('Edit Recruiters Activity',()=>{
         cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
         
         cy.loginapp('administrator','Admin@1234')
@@ -27,7 +27,7 @@ describe('Resume Template',()=>{
         cy.xpath("//div[@class='dropdown table-more-drop open']//a[@id='btnEdit']").click()
         cy.get('.add-body-buttons > #btn_Save').click()
 })
-it.only('Delete Resume Template',()=>{
+it('Delete Recruiters Activity',()=>{
     cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
     
     cy.loginapp('administrator','Admin@1234')

@@ -12,6 +12,7 @@ describe('Employee request',()=>{
         cy.xpath("//li[@id='div_edit']//i[@class='fa fa-pencil']").click()
         cy.get('#ddlLeadItem_').select('Company Name')
         cy.get('#ddlLeadSeparatedBy_').select('/')
+        cy.get('.fa.fa-save').click()
 
         
 

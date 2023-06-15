@@ -54,7 +54,7 @@ it('Job Publish to consultant',()=>{
     cy.get('#btn_ConsultantPreview').click()
     cy.get('#btn_ConsultantSave').click()
 })
-it.only('Job Publish to consultant',()=>{
+it('Job Publish to consultant',()=>{
     cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
     
     cy.loginapp('rajatpython94@gmail.com','Admin@1234')

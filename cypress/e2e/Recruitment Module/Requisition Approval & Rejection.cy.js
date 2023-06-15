@@ -17,5 +17,6 @@ describe('Requisition Approval/Rejection',()=>{
         cy.get('#employeeSatisfaction > .modal-dialog > .modal-content > .modal-header > .close').click()
         cy.get('a > :nth-child(1) > .fa').click()
         cy.get(':nth-child(1) > a > .notification-outer > .notification-title').click()
+        cy.get('#btnRequisitionReject').click()
 })
 })

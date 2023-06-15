@@ -29,7 +29,7 @@ describe('Recruitment setting',()=>{
 })
 
 
-it.only('Edit types of employment',()=>{
+it.only('Delete types of employment',()=>{
     cy.visit('http://hrms219.sphinxworldbiz.com:4085/LoginNew.aspx ')
     
     cy.loginapp('administrator','Admin@1234')
